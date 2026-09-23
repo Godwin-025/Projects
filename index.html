@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Smart Parcel is a clear, human-centred parcel delivery and collection assistant." />
+    <title>Smart Parcel | Delivery made clear</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#tracking">Skip to parcel tracking</a>
+
+    <header class="site-header">
+      <a class="brand" href="#home" aria-label="Smart Parcel home">
+        <span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span>
+        <span>smart<span>parcel</span></span>
+      </a>
+      <nav class="main-nav" aria-label="Primary navigation">
+        <a href="#tracking">Track parcel</a>
+        <a href="#collection">Collection</a>
+        <a href="#about">About the project</a>
+      </nav>
+      <button class="support-link" type="button" data-toast="A support specialist will be with you shortly.">
+        <span aria-hidden="true">?</span> Need help
+      </button>
+    </header>
+
+    <main id="home">
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">One place. Every parcel step.</p>
+          <h1>Delivery made <em>clear.</em></h1>
+          <p class="hero-lede">Know when your parcel is coming, make a change in seconds, and collect it confidently if plans move.</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#tracking">Track my parcel <span aria-hidden="true">→</span></a>
+            <a class="text-link" href="#about">See how it works <span aria-hidden="true">↘</span></a>
+          </div>
+          <div class="trust-row" aria-label="Service benefits">
+            <span><b aria-hidden="true">✓</b> Clear updates</span>
+            <span><b aria-hidden="true">✓</b> Easy changes</span>
+            <span><b aria-hidden="true">✓</b> Collection support</span>
+          </div>
+        </div>
+        <div class="hero-visual" aria-label="Illustration of a parcel arriving at a home" role="img">
+          <div class="sun"></div>
+          <div class="route route-one"></div><div class="route route-two"></div>
+          <div class="delivery-pin"><span></span></div>
+          <div class="house"><span class="roof"></span><span class="door"></span><span class="window one"></span><span class="window two"></span></div>
+          <div class="parcel-box"><span>SP</span></div>
+          <div class="mini-card card-delivery"><span class="mini-icon blue" aria-hidden="true">↗</span><div><small>On its way</small><strong>Today, 2:00 - 4:00 PM</strong></div></div>
+          <div class="mini-card card-notification"><span class="check-dot" aria-hidden="true">✓</span><div><small>Delivery update</small><strong>Driver is nearby</strong></div></div>
+        </div>
+      </section>
+
+      <section class="tracker-section section-shell" id="tracking" aria-labelledby="tracking-title">
+        <div class="section-heading compact">
+          <div>
+            <p class="eyebrow">Parcel centre</p>
+            <h2 id="tracking-title">Everything you need,<br /><span>at a glance.</span></h2>
+          </div>
+          <form class="tracking-search" id="tracking-form">
+            <label class="sr-only" for="tracking-number">Tracking number</label>
+            <input id="tracking-number" name="tracking-number" value="SP-4829-7641" autocomplete="off" />
+            <button class="button button-dark" type="submit">Track</button>
+          </form>
+        </div>
+
+        <div class="dashboard-grid">
+          <article class="shipment-card">
+            <div class="shipment-head">
+              <div class="shipment-icon" aria-hidden="true">▣</div>
+              <div><p class="muted-label">Your parcel</p><h3>Wireless headphones</h3><p class="tracking-id">SP-4829-7641 <button class="copy-button" type="button" data-copy="SP-4829-7641">Copy</button></p></div>
+              <span class="status-pill">Out for delivery</span>
+            </div>
+            <div class="arrival-callout">
+              <div><p>Expected today</p><strong>2:00 - 4:00 PM</strong></div>
+              <span class="arrival-icon" aria-hidden="true">⌁</span>
+            </div>
+            <ol class="progress-tracker" aria-label="Parcel journey">
+              <li class="done"><span aria-hidden="true">✓</span><div><strong>Order confirmed</strong><small>Mon, 9:32 AM</small></div></li>
+              <li class="done"><span aria-hidden="true">✓</span><div><strong>In transit</strong><small>Tue, 5:10 PM</small></div></li>
+              <li class="active"><span aria-hidden="true">●</span><div><strong>Out for delivery</strong><small>Today, 10:18 AM</small></div></li>
+              <li><span aria-hidden="true"></span><div><strong>Delivered</strong><small>We'll let you know</small></div></li>
+            </ol>
+          </article>
+
+          <aside class="next-step-card">
+            <div class="next-step-icon" aria-hidden="true">⌂</div>
+            <p class="eyebrow">Your next step</p>
+            <h3>Be available to receive your parcel.</h3>
+            <p>The driver will call when they are near your address.</p>
+            <div class="driver-row"><span class="driver-avatar" aria-hidden="true">A</span><div><strong>Arjun is delivering</strong><small>6 minutes away</small></div><button type="button" class="round-button" aria-label="Call driver" data-toast="Calling Arjun...">☎</button></div>
+          </aside>
+        </div>
+
+        <div class="action-cards" aria-label="Parcel actions">
+          <button class="action-card" type="button" data-dialog="reschedule-dialog"><span class="action-icon blue-bg" aria-hidden="true">◷</span><span><strong>Reschedule delivery</strong><small>Pick a more suitable time</small></span><b aria-hidden="true">→</b></button>
+          <button class="action-card" type="button" data-dialog="instructions-dialog"><span class="action-icon coral-bg" aria-hidden="true">⌖</span><span><strong>Delivery instructions</strong><small>Add a note for your driver</small></span><b aria-hidden="true">→</b></button>
+          <button class="action-card" type="button" data-toast="Your delivery alert is already set for 1:30 PM today."><span class="action-icon yellow-bg" aria-hidden="true">♧</span><span><strong>Set a reminder</strong><small>Never miss a delivery</small></span><b aria-hidden="true">→</b></button>
+        </div>
+      </section>
+
+      <section class="collection-section" id="collection" aria-labelledby="collection-title">
+        <div class="section-shell collection-layout">
+          <div class="collection-copy">
+            <p class="eyebrow">Collection made simple</p>
+            <h2 id="collection-title">Plans changed?<br /><span>We have you covered.</span></h2>
+            <p>No confusing messages or guessing where to go. If delivery is missed, we give you everything needed to collect your parcel smoothly.</p>
+            <ul class="feature-list">
+              <li><span aria-hidden="true">✓</span><div><strong>Exact location and directions</strong><small>Find the collection point without the stress.</small></div></li>
+              <li><span aria-hidden="true">✓</span><div><strong>Clear collection instructions</strong><small>Know what to bring and where to check in.</small></div></li>
+              <li><span aria-hidden="true">✓</span><div><strong>Helpful deadline reminders</strong><small>Collect before your parcel is returned.</small></div></li>
+            </ul>
+            <a class="button button-primary" href="#collection-card">View collection details <span aria-hidden="true">→</span></a>
+          </div>
+          <article class="collection-card" id="collection-card">
+            <div class="collection-card-header"><span class="location-icon" aria-hidden="true">⌖</span><div><p class="muted-label">Collection point</p><h3>City Centre Hub</h3></div><span class="ready-pill">Ready to collect</span></div>
+            <div class="map-art" aria-label="Illustrated route to City Centre Hub" role="img">
+              <span class="map-label label-a">Main Street</span><span class="map-label label-b">Park Road</span>
+              <span class="building building-a"></span><span class="building building-b"></span><span class="building building-c"></span><span class="building building-d"></span>
+              <svg viewBox="0 0 350 170" aria-hidden="true"><path d="M-20 145 C80 90 75 150 155 105 S245 100 380 30" fill="none" stroke="#d5dce8" stroke-width="20"/><path d="M-20 145 C80 90 75 150 155 105 S245 100 380 30" fill="none" stroke="#76c9f1" stroke-width="3" stroke-dasharray="7 7"/></svg>
+              <span class="map-pin"><i></i></span><span class="start-dot"></span>
+            </div>
+            <div class="collection-details">
+              <div><small>Open today</small><strong>9:00 AM - 8:00 PM</strong></div><div><small>Counter</small><strong>03</strong></div><div><small>Collect by</small><strong>Friday, 6 PM</strong></div>
+            </div>
+            <button class="button button-light full-width" type="button" data-toast="Opening directions to City Centre Hub.">Get directions <span aria-hidden="true">↗</span></button>
+          </article>
+        </div>
+      </section>
+
+      <section class="why-section section-shell" id="about" aria-labelledby="about-title">
+        <div class="section-heading centered">
+          <p class="eyebrow">Designed around real people</p>
+          <h2 id="about-title">Less uncertainty.<br /><span>More confidence.</span></h2>
+          <p>Smart Parcel turns the research insight into one simple experience: customers should always know what is happening and what to do next.</p>
+        </div>
+        <div class="insight-grid">
+          <article><span class="insight-number">01</span><span class="insight-icon" aria-hidden="true">◎</span><h3>Clear from the start</h3><p>Short, useful delivery details replace unclear instructions and repeated searching.</p></article>
+          <article><span class="insight-number">02</span><span class="insight-icon" aria-hidden="true">⌁</span><h3>Updates that matter</h3><p>Helpful notifications reduce waiting and give customers time to prepare.</p></article>
+          <article><span class="insight-number">03</span><span class="insight-icon" aria-hidden="true">⌖</span><h3>Support when plans change</h3><p>Rescheduling and collection guidance make a missed delivery manageable.</p></article>
+        </div>
+        <div class="process-strip">
+          <div><span>21</span><small>survey responses</small></div><i></i><div><span>5</span><small>design thinking stages</small></div><i></i><div><span>1</span><small>simple parcel assistant</small></div>
+          <p>Built from research into delivery timing, updates, waiting, communication, and clear next steps.</p>
+        </div>
+      </section>
+
+      <section class="cta-section">
+        <div class="cta-inner section-shell"><div><p class="eyebrow">A better way to receive</p><h2>Your parcel journey,<br /><em>without the guesswork.</em></h2></div><a class="button button-white" href="#tracking">Try the parcel centre <span aria-hidden="true">→</span></a></div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <a class="brand" href="#home"><span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span><span>smart<span>parcel</span></span></a>
+      <p>Smart Parcel Delivery Assistant · Design Thinking Project · 2026-27</p>
+      <a href="#about">Project overview ↑</a>
+    </footer>
+
+    <dialog class="modal" id="reschedule-dialog" aria-labelledby="reschedule-title">
+      <button class="modal-close" type="button" aria-label="Close" data-close-dialog>×</button>
+      <p class="eyebrow">Choose a time that works</p><h2 id="reschedule-title">Reschedule delivery</h2><p class="modal-intro">Your parcel will stay safe while you choose a new delivery slot.</p>
+      <form class="choice-form" data-submit-message="Your delivery is rescheduled. We will send a confirmation shortly.">
+        <label class="choice selected"><input type="radio" name="slot" checked /><span><b>Tomorrow</b><small>9:00 AM - 12:00 PM</small></span><i aria-hidden="true"></i></label>
+        <label class="choice"><input type="radio" name="slot" /><span><b>Tomorrow</b><small>2:00 PM - 5:00 PM</small></span><i aria-hidden="true"></i></label>
+        <label class="choice"><input type="radio" name="slot" /><span><b>Friday</b><small>10:00 AM - 1:00 PM</small></span><i aria-hidden="true"></i></label>
+        <button class="button button-primary full-width" type="submit">Confirm new time</button>
+      </form>
+    </dialog>
+
+    <dialog class="modal" id="instructions-dialog" aria-labelledby="instructions-title">
+      <button class="modal-close" type="button" aria-label="Close" data-close-dialog>×</button>
+      <p class="eyebrow">Help your driver</p><h2 id="instructions-title">Delivery instructions</h2><p class="modal-intro">A clear note makes delivery easier for everyone.</p>
+      <form class="note-form" data-submit-message="Your delivery instructions have been saved.">
+        <label for="delivery-note">Note for the driver</label>
+        <textarea id="delivery-note" maxlength="160" placeholder="For example: Please ring the bell at flat 4B."></textarea>
+        <p class="field-note">Do not include sensitive personal information.</p>
+        <button class="button button-primary full-width" type="submit">Save instructions</button>
+      </form>
+    </dialog>
+    <div class="toast" role="status" aria-live="polite"></div>
+    <script src="script.js"></script>
+  </body>
+</html>
